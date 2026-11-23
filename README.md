@@ -5,13 +5,15 @@
 Mikhail Kurkov's FORMULA conjectures of 5 April 2025 in OEIS A340991, revision 24, and A357583, revision 10 (both dated 6 April 2025), propose the same shifted-array recursion for the prime and Bell convolution triangles and for arbitrary coefficient sequences. We prove the recursion over every unital semiring, including noncommutative ones, with the stated order of multiplication. A shifted-tail coefficient formula determines every array column. It also gives the Bell specialization, finite-support recurrences, and the factorial generating function conjectured by Bala; the latter and its continued fraction are deductions of classical INVERT and Euler identities.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24410093](https://doi.org/10.5281/zenodo.24410093)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24410092](https://doi.org/10.5281/zenodo.24410092)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [kurkov-a340991-convolution-row-recursion](https://mathesis-omega-research.apps.chrono-ai.fun/papers/kurkov-a340991-convolution-row-recursion?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Kurkov's convolution-row conjectures over arbitrary semirings. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/kurkov-a340991-convolution-row-recursion?version=2
+Haobo Ma, Wenlin Zhang (2026). Kurkov's convolution-row conjectures over arbitrary semirings. Mathesis, version 2. https://doi.org/10.5281/zenodo.24410093
 
 ## Statement progress
 
