@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 82257,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "fa75f1671182ae4e81b07bb3e0236862e54f0f23dc74c8862ffe9cc281691650",
+      "sha256": "fa75f1671182ae4e81b07bb3e0236862e54f0f23dc74c8862ffe9cc281691650"
+    },
+    "source": {
+      "bytes": 21870,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "fc4200a3573dc9bdb31717509a0668db16cea8f5592deb9ce031e18cb7d3e693",
+      "sha256": "fc4200a3573dc9bdb31717509a0668db16cea8f5592deb9ce031e18cb7d3e693"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Mikhail Kurkov's FORMULA conjectures of 5 April 2025 in OEIS A340991, revision 24, and A357583, revision 10 (both dated 6 April 2025), propose the same shifted-array recursion for the prime and Bell convolution triangles and for arbitrary coefficient sequences. We prove the recursion over every unital semiring, including noncommutative ones, with the stated order of multiplication. A shifted-tail coefficient formula determines every array column. It also gives the Bell specialization, finite-support recurrences, and the factorial generating function conjectured by Bala; the latter and its continued fraction are deductions of classical INVERT and Euler identities.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 82257,
+      "sha256": "fa75f1671182ae4e81b07bb3e0236862e54f0f23dc74c8862ffe9cc281691650",
+      "url": "/api/v1/collected-papers/kurkov-a340991-convolution-row-recursion/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T04:42:33.985778225Z",
+    "record": "kurkov-a340991-convolution-row-recursion",
+    "repository_name": "kurkov-a340991-convolution-row-recursion",
+    "source": {
+      "bytes": 21870,
+      "sha256": "fc4200a3573dc9bdb31717509a0668db16cea8f5592deb9ce031e18cb7d3e693",
+      "url": "/api/v1/collected-papers/kurkov-a340991-convolution-row-recursion/files/source?version=2"
+    },
+    "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T04:42:33.985778225Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "kurkov-a340991-convolution-row-recursion"
+  }
+}

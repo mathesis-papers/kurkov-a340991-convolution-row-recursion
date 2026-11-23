@@ -1,0 +1,407 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\coeff}[2]{[#1^{#2}]}
+\newcommand{\N}{\mathbb{N}}
+\title{Kurkov's convolution-row conjectures over arbitrary semirings}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{13 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Mikhail Kurkov's FORMULA conjectures of 5 April 2025 in OEIS A340991,
+revision 24, and A357583, revision 10 (both dated 6 April 2025), propose
+the same shifted-array recursion for the prime and Bell convolution
+triangles and for arbitrary coefficient sequences. We prove the recursion
+over every unital semiring, including noncommutative ones, with the stated
+order of multiplication. A shifted-tail coefficient formula determines
+every array column. It also gives the Bell specialization, finite-support
+recurrences, and the factorial generating function conjectured by Bala;
+the latter and its continued fraction are deductions of classical INVERT
+and Euler identities.
+\end{abstract}
+
+\section{The convolution triangle and the conjecture}
+Kurkov conjectures that ``row polynomials are $xR(n,1)$'' for the prime
+and Bell convolution triangles \cite{a340991,bell}. His accompanying
+observation is that ``The same recursion seems to work for self-convolution
+of any other sequence.'' We prove both conjectures by expressing each
+array column using the corresponding tail of the coefficient sequence.
+
+Let $K$ be a unital semiring: addition is a commutative monoid, multiplication
+is an associative monoid, multiplication distributes over addition, and
+$0$ annihilates products. Multiplication need not be commutative. Let
+$a_1,a_2,\ldots$ be elements of $K$. The variables $z$ and $x$ are central,
+so they commute with each other and with every coefficient. For a formal
+power series $F$, write $[z^n]F$ for its coefficient of degree $n$. Set
+\begin{equation}\label{eq:rows}
+ A(z)=\sum_{j\geq1}a_jz^j,\qquad
+ T(n,r)=[z^n]A(z)^r,\qquad
+ P_n(x)=\sum_{r=0}^{n}T(n,r)x^r .
+\end{equation}
+Here $n,r\in\N=\{0,1,2,\ldots\}$, $A^0=1$, and $P_0(x)=1$.
+Since $A$ has constant coefficient zero, $T(n,r)=0$ if $r>n$.
+For commutative coefficients these $T(n,r)$ are the ordinary partial Bell,
+or De Moivre, polynomials: see O'Sullivan \cite[Definition 1.1 and
+equations (2.4), (2.6)]{osullivan}. In particular, the ordered-composition
+expansion of $A^r$ is classical; our argument identifies it with Kurkov's
+shifted array.
+
+For $n,k\geq1$, define polynomials $R(n,k)$ recursively by
+\begin{equation}\label{eq:recursion}
+ R(1,k)=a_k,\qquad
+ R(n,k)=R(n-1,k+1)+xR(n-1,1)a_k\quad(n>1).
+\end{equation}
+Taking $a_j$ to be the $j$th prime gives the exact recursion conjectured by
+Mikhail Kurkov on 5 April 2025 in OEIS A340991 \cite{a340991}; taking $a_j$
+to be the $j$th Bell number gives his identical conjecture in A357583
+\cite{bell}. Both entries propose the same rule for any sequence. Keeping
+the factor $a_k$ on the right in \eqref{eq:recursion} makes that assertion
+valid even when coefficients do not commute.
+
+\begin{theorem}\label{thm:main}
+For every sequence over every unital semiring and every $n,k\geq1$,
+\begin{equation}\label{eq:tailformula}
+ R(n,k)=\sum_{r=0}^{n-1}x^r[z^{n-1}]A(z)^rB_k(z),
+ \qquad B_k(z)=\sum_{j\geq0}a_{k+j}z^j.
+\end{equation}
+Consequently, for every $n\geq1$,
+\begin{equation}\label{eq:identity}
+ P_n(x)=xR(n,1).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+All series calculations are formal. Work in $K[x][[z]]$ and put
+\[
+ S(z,x)=\sum_{r\geq0}x^rA(z)^r,\qquad C_k(z,x)=S(z,x)B_k(z).
+\]
+These expressions are well defined: in degree $n$ in $z$, only the
+finitely many indices $r\leq n$ contribute, so every coefficient is a
+polynomial in $x$. The elementary identities
+\begin{equation}\label{eq:splitting}
+ B_k=a_k+zB_{k+1},\qquad A=zB_1,\qquad S=1+xSA
+\end{equation}
+follow coefficientwise. For the last identity, multiply each term of
+$S$ on the right by $A$ and shift the exponent $r$ by one; this uses
+associativity, not commutativity of coefficients. The order of the two
+factors in $C_k=SB_k$ is important. Equations \eqref{eq:splitting} give
+\begin{align*}
+ C_k
+ &=Sa_k+zSB_{k+1}\\
+ &=a_k+xSAa_k+zC_{k+1}\\
+ &=a_k+zC_{k+1}+xzC_1a_k.
+\end{align*}
+The constant coefficient of $C_k$ is $a_k$. Extracting the coefficient
+of $z^{n-1}$ for $n>1$ shows that the polynomials
+$[z^{n-1}]C_k$ obey exactly \eqref{eq:recursion}. Induction on $n$,
+simultaneously for every positive $k$, therefore gives
+$R(n,k)=[z^{n-1}]C_k$. Expanding $S$ proves
+\eqref{eq:tailformula}; terms with $r>n-1$ vanish.
+
+Also $S=1+xzC_1$ by \eqref{eq:splitting}. The coefficient of $z^n$ in
+$S$ is $P_n(x)$ by \eqref{eq:rows}. For $n\geq1$ the constant series
+$1$ contributes zero, so $P_n(x)=x[z^{n-1}]C_1=xR(n,1)$.
+This proves \eqref{eq:identity}. The zeroth row is $P_0=1$ and is not
+part of the positive-row assertion.
+\end{proof}
+
+For example, over a noncommutative semiring the fourth row is
+\begin{align*}
+ P_4(x)={}&a_4x+(a_1a_3+a_2^2+a_3a_1)x^2\\
+ &+(a_1^2a_2+a_1a_2a_1+a_2a_1^2)x^3+a_1^4x^4 .
+\end{align*}
+For $a_1,a_2,a_3,a_4=2,3,5,7$ this becomes
+$7x+29x^2+36x^3+16x^4$, the fourth positive row displayed in
+A340991.
+
+\section{Consequences and source coverage}
+The same coefficient expansion gives useful specializations without the
+auxiliary array. In the following display only, assume $K$ is a
+commutative ring, so the indicated formal inverses exist.
+
+\begin{corollary}\label{cor:sums}
+For $n\geq0$,
+\begin{align}
+ P_n(1)&=[z^n]\frac{1}{1-A(z)},&
+ P_n(-1)&=[z^n]\frac{1}{1+A(z)},\label{eq:sums}\\
+ \sum_{r=0}^n rT(n,r)&=[z^n]\frac{A(z)}{(1-A(z))^2}.
+ &&\label{eq:weighted}
+\end{align}
+For a sequence over any unital semiring, $T(n,n)=a_1^n$ and
+\begin{equation}\label{eq:twosided}
+ P_n(x)=x\sum_{j=1}^n P_{n-j}(x)a_j
+       =x\sum_{j=1}^n a_jP_{n-j}(x)\quad(n\geq1).
+\end{equation}
+If $a_j=0$ for $j>d$, both sums stop at $\min(n,d)$.
+\end{corollary}
+\begin{proof}
+Evaluate $S=\sum_{r\geq0}x^rA^r$ at $x=1$ and $x=-1$ for
+\eqref{eq:sums}. Differentiate this identity formally with respect to
+the central variable $x$, evaluate at $x=1$, and use
+$\partial_x(1-xA)^{-1}=A(1-xA)^{-2}$ for \eqref{eq:weighted}.
+All operations are coefficientwise finite. In $A^n$, the only product
+of $n$ positive degrees summing to $n$ uses degree one each time,
+giving $T(n,n)=a_1^n$, including $T(0,0)=1$. Finally, taking
+$[z^n]$ in $S=1+xSA=1+xAS$ gives the two recurrences. The second
+series identity holds because $A$ commutes with each of its own powers,
+even if distinct coefficients do not commute. Zero coefficients beyond
+$d$ remove the remaining summands.
+\end{proof}
+
+For primes, these are the established row-sum identities A030017$(n+1)$,
+A030018$(n)$ and A030281$(n)$, respectively \cite{sequences}.
+The first identity is the classical INVERT transform of Bernstein and
+Sloane \cite[\S1, INVERT]{bernstein}; see also \cite{transforms}.
+
+\begin{corollary}\label{cor:bell}
+Let $b_j=\operatorname{Bell}(j)$ for $j\geq0$ and
+$B(z)=\sum_{j\geq1}b_jz^j$. Kurkov's recursion with $R(1,k)=b_k$
+gives every positive row of A357583. Its row sums $u_n$ satisfy
+\[
+ u_0=1,\qquad u_n=\sum_{j=1}^n b_j u_{n-j},\qquad
+ \sum_{n\geq0}u_nz^n=\frac1{1-B(z)}.
+\]
+Its central terms are $[z^{2n}]B(z)^n$.
+\end{corollary}
+\begin{proof}
+Substitute $a_j=b_j$ into Theorem~\ref{thm:main} and
+Corollary~\ref{cor:sums}, and then take $x=1$ in
+\eqref{eq:twosided}. Taking column $n$ of row $2n$ gives the last formula.
+The row sums and central terms are the defining identities of A129247
+and A357584, respectively \cite{bell}; they are not additional conjectures.
+\end{proof}
+
+\begin{corollary}\label{cor:factorial}
+Set $a_j=j!$ for $j\geq1$ and $F(z)=\sum_{j\geq0}j!z^j$. The
+row polynomials of A090238 have the bivariate generating function
+\begin{equation}\label{eq:bala}
+ G(z,x):=\sum_{n\geq0}P_n(x)z^n=\frac1{1+x-xF(z)}.
+\end{equation}
+Writing $H(z)=\cfrac{z}{1-\cfrac{2z}{1-\cfrac{2z}{1-\cfrac{3z}{1-\cfrac{3z}{\ddots}}}}}$,
+the same series is
+\begin{equation}\label{eq:balacf}
+ G(z,x)=1-x+\frac{x}{1-\dfrac{z}{1-xz-H(z)}}.
+\end{equation}
+These are the generating function and continued fraction proposed by
+Peter Bala in the FORMULA section of A090238 on 27 May 2017
+\cite{factorial}; his variables $x,t$ are $z,x$ here.
+\end{corollary}
+\begin{proof}
+Here $A=F-1$, so the geometric series $S=(1-xA)^{-1}$ proves
+\eqref{eq:bala}. This is the classical INVERT identity with a weight
+$x$ for each part \cite{bernstein}.
+Euler's factorial continued fraction is
+\[
+ F(z)=\cfrac1{1-\cfrac{z}{1-\cfrac{z}{1-\cfrac{2z}{1-\cfrac{2z}{\ddots}}}}}
+     =\frac1{1-z/(1-H(z))}.
+\]
+Successive denominator contraction gives the Jacobi fraction with linear
+coefficients $1,3,5,\ldots$ and quadratic numerators
+$1^2z^2,2^2z^2,3^2z^2,\ldots$, which is Flajolet's factorial identity
+\cite[Theorem 3B, p.~145]{flajolet}. Specifically, the Stieltjes
+numerators $s_{2j-1}=s_{2j}=j$ give linear coefficients $s_1=1$ and
+$s_{2j}+s_{2j+1}=2j+1$, and quadratic coefficients
+$s_{2j-1}s_{2j}=j^2$.
+Substitution into \eqref{eq:bala} gives
+\[
+ G=\frac{1-H-z}{1-H-(1+x)z}
+  =1-x+x\frac{1-H-xz}{1-H-(1+x)z},
+\]
+which is \eqref{eq:balacf}. Every denominator has constant coefficient
+one. Continued fractions mean coefficientwise limits of their finite
+truncations, so no analytic convergence assertion is involved.
+\end{proof}
+
+The input convention matters. Theorem~\ref{thm:main} also applies to
+the Catalan input $a_j=C_j$ in A128899, where
+$C_j=\binom{2j}{j}/(j+1)$. Replacing $a_j$ by $b_{j-1}$ instead gives
+A205574, not the Bell triangle A357583. Similarly,
+$a_j=(j-1)!$ gives A084938, not A090238. For the shifted Catalan input
+$a_j=C_{j-1}$ it gives the positive rows of A059365, whose displayed
+zeroth entry is $0$ rather than our $P_0=1$ \cite{variants}.
+These are coefficient substitutions, not claims about the other
+DELTA-transform or arithmetic identities in those entries.
+
+\begin{corollary}\label{cor:variants}
+For $D(z)=z(1+A(z))$, put $T_D(n,r)=[z^n]D(z)^r$.
+Over any unital semiring,
+\begin{equation}\label{eq:shift}
+ T_D(n+m,m)=\sum_{r=0}^{n}\binom mr T(n,r)\quad(n,m\geq0).
+\end{equation}
+In particular, this proves the A090238--A084938 binomial identity.
+For integer factorial input $a_j=j!$ and $n,r\geq1$,
+\begin{equation}\label{eq:factrec}
+ rT(n,r)=rT(n-1,r-1)+(n+r-1)T(n-1,r).
+\end{equation}
+For the Catalan input $a_j=C_j$ and $n,r\geq1$,
+\begin{equation}\label{eq:catrec}
+ T(n,r)=T(n-1,r-1)+2T(n-1,r)+T(n-1,r+1).
+\end{equation}
+The last two formulas recover the recurrences recorded in A090238 and
+A128899, respectively \cite{factorial,variants}.
+\end{corollary}
+\begin{proof}
+Extract $[z^n]$ in $(1+A)^m=\sum_{r=0}^{m}\binom mr A^r$.
+Terms with $r>n$ vanish, giving \eqref{eq:shift}; the binomial theorem
+applies because $1$ commutes with $A$.
+For factorial input, coefficient comparison gives
+$z^2A'=(1-z)A-z$. Thus
+$z^2(A^r)'=r(1-z)A^r-rzA^{r-1}$; taking $[z^n]$ gives
+\eqref{eq:factrec}. For Catalan input the defining square-root series
+in A128899 gives $A=z(1+A)^2$. Multiply by $A^{r-1}$ and extract
+$[z^n]$ to obtain \eqref{eq:catrec}. All boundary coefficients come
+from $A^0=1$ and $[z^0]A=0$.
+\end{proof}
+
+The zero constant term of $A$ is essential for the stated recursion.
+For the variant $\widetilde A(z)=1+z^2$ over $\mathbb Z$, define
+$\widetilde P_n(x)=\sum_{r=0}^n[z^n]\widetilde A(z)^r x^r$.
+The positive input has $a_1=0,a_2=1$, so $xR(2,1)=x$ whereas
+$\widetilde P_2=x+2x^2$. This variant is not asserted in the posing
+sources; it fails for the displayed example.
+
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{}}
+\toprule
+Source statement & Coverage\\
+\midrule
+\endhead
+Kurkov's prime-row conjecture; arbitrary-sequence assertion
+& Proved by Theorem~\ref{thm:main}; includes noncommutative semirings.\\[3pt]
+Kurkov's Bell conjecture and arbitrary-sequence proposal (A357583)
+& Proved, Corollary~\ref{cor:bell}; same universal theorem.\\[3pt]
+Row and weighted sums; alternating sums
+& Reproved by Corollary~\ref{cor:sums}; prior identities in A030017,
+A030281 and Heinz's 2021 formula in A030018.\\[3pt]
+Bell row sums and central terms (A129247, A357584)
+& Reproved; prior definitions by Wieder (2008) and Luschny (2022);
+Corollary~\ref{cor:bell}.\\[3pt]
+Bala's factorial generating function and continued-fraction proposal
+(A090238, FORMULA, 27 May 2017)
+& Reproved; prior INVERT identity, Bernstein--Sloane (1995), and
+factorial fraction, Euler, as proved by Flajolet (1980);
+Corollary~\ref{cor:factorial}.\\[3pt]
+Diagonal A000079
+& $T(n,n)=2^n$ by Corollary~\ref{cor:sums}.\\[3pt]
+Columns A000007, A000040, A014342--A014344
+& $r=0$ is $\delta_{n,0}$; $r=1$ is the prime sequence for $n>0$;
+$r=2,3,4$ are its convolution powers by \eqref{eq:rows}.\\[3pt]
+Subdiagonal extraction A340990
+& Its defining coefficient $[z^{2n}]A^n=T(2n,n)$ is identified by
+\eqref{eq:rows}.\\[3pt]
+Convolution triangle A357368, cited for its program
+& Theorem~\ref{thm:main} applies to $a_j=j$ for prime $j$ and $a_j=1$
+otherwise, the input used in that entry's programs.\\
+Bell, factorial and Catalan variants in A357368's comments
+& Proved substitutions and binomial shift, Corollary~\ref{cor:variants};
+A059365 differs at row zero.\\[3pt]
+Factorial and Catalan recurrences (A090238, A128899)
+& Reproved source identities, \eqref{eq:factrec} and \eqref{eq:catrec}.\\[3pt]
+Row-polynomial programs in A357368; finite-support inputs
+& Proved recurrence \eqref{eq:twosided}; the latter is not posed,
+but follows for all semirings by truncating its sums.\\[3pt]
+Series reversions A007311, A357588; other DELTA-transform identities;
+unrelated arithmetic conjectures in prime, power and Bell entries
+& Not covered by the shifted-array identity.\\[3pt]
+Nonzero constant term in the source series
+& Not posed; obstruction proved: $\widetilde A=1+z^2$ fails at $n=2$.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Mathematical verification scope}
+The commutative-semiring case of \eqref{eq:identity} is formalized by
+\texttt{result} in the
+\href{https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean}{pinned Lean source}
+(namespace \texttt{D5.S1.Recurrence.Algebraic.} followed by
+\texttt{KurkovConvolutionRowRecursion}). Its private lemma
+\texttt{kurkov\_coeff} states
+\[
+ [x^r]R(n+1,k+1)=[z^n]A(z)^rB_{k+1}(z)
+ \quad(n,k,r\in\N)
+\]
+over every commutative semiring. In that domain the source's product
+$x a_kR(n-1,1)$ equals the product in \eqref{eq:recursion}.
+The definition \texttt{RecursiveBoundaryRowSeries.tail} in the
+\href{https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/RecursiveBoundaryRowSeries.lean}{pinned tail-definition file}
+has coefficient $a_{k+j}$ in degree $j$ and supplies precisely $B_k$.
+The noncommutative extension and the specializations above have the
+written proofs in this note. The accompanying \texttt{verify.py}
+compares exact convolution coefficients with both the array recursion
+and the tail formula in finite integer, Boolean, modular, matrix and
+free-symbol examples, the Bell, factorial and shifted triangles, and
+the factorial continued fraction; \texttt{finite-checks.json} states
+their ranges. These are finite coefficient comparisons, distinct from
+the written all-index proofs.
+
+\begin{thebibliography}{9}
+\bibitem{a340991}
+A. P. Heinz, \emph{Triangle whose columns are self-convolutions of the
+primes}, OEIS A340991, revision 24, 6 April 2025; FORMULA conjecture by
+M. Kurkov, 5 April 2025.
+\url{https://oeis.org/history/view?seq=A340991&v=24}.
+
+\bibitem{osullivan}
+C. O'Sullivan, \emph{De Moivre and Bell polynomials},
+arXiv:2203.02868v1, 2022, Definition 1.1 and \S2.
+\url{https://arxiv.org/abs/2203.02868v1}.
+
+\bibitem{bell}
+P. Luschny, \emph{Convolution triangle of the Bell numbers}, OEIS
+\href{https://oeis.org/history/view?seq=A357583&v=10}{A357583, revision 10},
+6 April 2025; FORMULA conjecture by M. Kurkov, 5 April 2025.
+Related entries: T. Wieder, \href{https://oeis.org/A129247}{A129247}
+(2008); P. Luschny, \href{https://oeis.org/A357584}{A357584} (2022).
+
+\bibitem{factorial}
+P. Del\'eham, \emph{Lists of unlabeled permutations}, OEIS
+\href{https://oeis.org/history/view?seq=A090238&v=46}{A090238, revision 46},
+17 October 2022; title from a comment of D. Callan; FORMULA generating
+function and continued fraction by P. Bala, 27 May 2017.
+
+\bibitem{bernstein}
+M. Bernstein and N. J. A. Sloane, \emph{Some canonical sequences of
+integers}, Linear Algebra Appl. 226--228 (1995), 57--72;
+erratum 320 (2000), 210. \S1, INVERT.
+\url{https://arxiv.org/abs/math/0205301}.
+
+\bibitem{flajolet}
+P. Flajolet, \emph{Combinatorial aspects of continued fractions},
+Discrete Math. 32 (1980), 125--161, Theorem 3B, p.~145.
+\url{https://algo.inria.fr/flajolet/Publications/Flajolet80b.pdf}.
+
+\bibitem{variants}
+The OEIS Foundation, convolution-triangle variants
+\href{https://oeis.org/A205574}{A205574},
+\href{https://oeis.org/A084938}{A084938},
+\href{https://oeis.org/A128899}{A128899},
+\href{https://oeis.org/A059365}{A059365}; reversion entries
+\href{https://oeis.org/A007311}{A007311},
+\href{https://oeis.org/A357588}{A357588}; accessed 13 November 2026.
+
+\bibitem{sequences}
+The OEIS Foundation, entries
+\href{https://oeis.org/A030017}{A030017},
+\href{https://oeis.org/A030018}{A030018},
+\href{https://oeis.org/A030281}{A030281},
+\href{https://oeis.org/A340990}{A340990} and
+\href{https://oeis.org/A357368}{A357368};
+sequence definitions and formulas, accessed 13 November 2026.
+
+\bibitem{transforms}
+N. J. A. Sloane, \emph{Transformations of integer sequences}, INVERT and COMPOSE entries,
+The On-Line Encyclopedia of Integer Sequences.
+\url{https://oeis.org/transforms.txt}.
+\end{thebibliography}
+
+\bigskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{Creative
+Commons Attribution 4.0 International (CC BY 4.0)}.
+\end{document}

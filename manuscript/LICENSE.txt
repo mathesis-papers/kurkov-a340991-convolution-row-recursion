@@ -1,0 +1,8 @@
+Copyright 2026 Haobo Ma and Wenlin Zhang.
+
+The note and original accompanying code are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+The numerical fixtures are attributed in fixtures.json to the corresponding entries of The On-Line Encyclopedia of Integer Sequences.
+OEIS source content is governed by the OEIS End-User License Agreement:
+https://oeis.org/LICENSE

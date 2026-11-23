@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:kurkov-a340991-convolution-row-recursion:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+      },
+      "lineage": "collected:kurkov-a340991-convolution-row-recursion:s1",
+      "macros": {
+        "\\N": "\\mathbb{N}",
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "kurkov-a340991-convolution-row-recursion",
+      "scope": "in_scope",
+      "statement": "For every sequence over every unital semiring and every $n,k\\geq1$,\n\\begin{equation}\n R(n,k)=\\sum_{r=0}^{n-1}x^r[z^{n-1}]A(z)^rB_k(z),\n \\qquad B_k(z)=\\sum_{j\\geq0}a_{k+j}z^j.\n\\end{equation}\nConsequently, for every $n\\geq1$,\n\\begin{equation}\n P_n(x)=xR(n,1).\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+      "toolchain": null,
+      "version": 2,
+      "work": "kurkov-a340991-convolution-row-recursion"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:kurkov-a340991-convolution-row-recursion:2:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+      },
+      "lineage": "collected:kurkov-a340991-convolution-row-recursion:s2",
+      "macros": {
+        "\\N": "\\mathbb{N}",
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "kurkov-a340991-convolution-row-recursion",
+      "scope": "in_scope",
+      "statement": "For $n\\geq0$,\n\\begin{align}\n P_n(1)&=[z^n]\\frac{1}{1-A(z)},&\n P_n(-1)&=[z^n]\\frac{1}{1+A(z)},\\\\\n \\sum_{r=0}^n rT(n,r)&=[z^n]\\frac{A(z)}{(1-A(z))^2}.\n &&\n\\end{align}\nFor a sequence over any unital semiring, $T(n,n)=a_1^n$ and\n\\begin{equation}\n P_n(x)=x\\sum_{j=1}^n P_{n-j}(x)a_j\n       =x\\sum_{j=1}^n a_jP_{n-j}(x)\\quad(n\\geq1).\n\\end{equation}\nIf $a_j=0$ for $j>d$, both sums stop at $\\min(n,d)$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+      "toolchain": null,
+      "version": 2,
+      "work": "kurkov-a340991-convolution-row-recursion"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:kurkov-a340991-convolution-row-recursion:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+      },
+      "lineage": "collected:kurkov-a340991-convolution-row-recursion:s3",
+      "macros": {
+        "\\N": "\\mathbb{N}",
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "kurkov-a340991-convolution-row-recursion",
+      "scope": "in_scope",
+      "statement": "Let $b_j=\\operatorname{Bell}(j)$ for $j\\geq0$ and\n$B(z)=\\sum_{j\\geq1}b_jz^j$. Kurkov's recursion with $R(1,k)=b_k$\ngives every positive row of A357583. Its row sums $u_n$ satisfy\n\\[\n u_0=1,\\qquad u_n=\\sum_{j=1}^n b_j u_{n-j},\\qquad\n \\sum_{n\\geq0}u_nz^n=\\frac1{1-B(z)}.\n\\]\nIts central terms are $[z^{2n}]B(z)^n$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+      "toolchain": null,
+      "version": 2,
+      "work": "kurkov-a340991-convolution-row-recursion"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:kurkov-a340991-convolution-row-recursion:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+      },
+      "lineage": "collected:kurkov-a340991-convolution-row-recursion:s4",
+      "macros": {
+        "\\N": "\\mathbb{N}",
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "kurkov-a340991-convolution-row-recursion",
+      "scope": "in_scope",
+      "statement": "Set $a_j=j!$ for $j\\geq1$ and $F(z)=\\sum_{j\\geq0}j!z^j$. The\nrow polynomials of A090238 have the bivariate generating function\n\\begin{equation}\n G(z,x):=\\sum_{n\\geq0}P_n(x)z^n=\\frac1{1+x-xF(z)}.\n\\end{equation}\nWriting $H(z)=\\cfrac{z}{1-\\cfrac{2z}{1-\\cfrac{2z}{1-\\cfrac{3z}{1-\\cfrac{3z}{\\ddots}}}}}$,\nthe same series is\n\\begin{equation}\n G(z,x)=1-x+\\frac{x}{1-\\dfrac{z}{1-xz-H(z)}}.\n\\end{equation}\nThese are the generating function and continued fraction proposed by\nPeter Bala in the FORMULA section of A090238 on 27 May 2017\n\\cite{factorial}; his variables $x,t$ are $z,x$ here.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+      "toolchain": null,
+      "version": 2,
+      "work": "kurkov-a340991-convolution-row-recursion"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:kurkov-a340991-convolution-row-recursion:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "03150b25ffad5ced1bebdca2efc8c05b484c1eca",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+      },
+      "lineage": "collected:kurkov-a340991-convolution-row-recursion:s5",
+      "macros": {
+        "\\N": "\\mathbb{N}",
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "kurkov-a340991-convolution-row-recursion",
+      "scope": "in_scope",
+      "statement": "For $D(z)=z(1+A(z))$, put $T_D(n,r)=[z^n]D(z)^r$.\nOver any unital semiring,\n\\begin{equation}\n T_D(n+m,m)=\\sum_{r=0}^{n}\\binom mr T(n,r)\\quad(n,m\\geq0).\n\\end{equation}\nIn particular, this proves the A090238--A084938 binomial identity.\nFor integer factorial input $a_j=j!$ and $n,r\\geq1$,\n\\begin{equation}\n rT(n,r)=rT(n-1,r-1)+(n+r-1)T(n-1,r).\n\\end{equation}\nFor the Catalan input $a_j=C_j$ and $n,r\\geq1$,\n\\begin{equation}\n T(n,r)=T(n-1,r-1)+2T(n-1,r)+T(n-1,r+1).\n\\end{equation}\nThe last two formulas recover the recurrences recorded in A090238 and\nA128899, respectively \\cite{factorial,variants}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+      "toolchain": null,
+      "version": 2,
+      "work": "kurkov-a340991-convolution-row-recursion"
+    }
+  ]
+}

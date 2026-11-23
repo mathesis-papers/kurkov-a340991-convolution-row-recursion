@@ -1,0 +1,143 @@
+{
+  "status": "pass",
+  "arithmetic": "exact",
+  "prime_rows": {
+    "max_n": 16,
+    "max_array_column": 4,
+    "OEIS_rows_matched": [
+      0,
+      10
+    ]
+  },
+  "signed_integer_sequences": {
+    "alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "support_bound": 6,
+    "sequences": 729,
+    "max_n": 6,
+    "max_array_column": 4
+  },
+  "mod_2_sequences": {
+    "support_bound": 6,
+    "sequences": 64,
+    "max_n": 6,
+    "max_array_column": 4
+  },
+  "boolean_sequences": {
+    "support_bound": 6,
+    "sequences": 64,
+    "max_n": 6,
+    "max_array_column": 4
+  },
+  "noncommutative_matrices": {
+    "ring": "2 by 2 matrices over Z/5Z",
+    "support_bound": 3,
+    "sequences": 27,
+    "max_n": 8,
+    "max_array_column": 4
+  },
+  "free_noncommutative_symbols": {
+    "symbols": 11,
+    "max_n": 8,
+    "max_array_column": 4
+  },
+  "A357368": {
+    "input": "a_j=j for prime j, otherwise 1",
+    "max_n": 10,
+    "OEIS_rows_matched": [
+      0,
+      9
+    ]
+  },
+  "sibling_triangles": {
+    "OEIS_rows_matched": [
+      0,
+      9
+    ],
+    "array_identity_max_n": 12,
+    "max_array_column": 4,
+    "inputs": {
+      "A357583": "Bell(j)",
+      "A090238": "j!",
+      "A128899": "Catalan(j)",
+      "A205574": "Bell(j-1)",
+      "A084938": "(j-1)!",
+      "A059365": "Catalan(j-1)"
+    },
+    "A059365_boundary": "Positive rows match; the OEIS row-zero entry is 0, whereas P_0=1.",
+    "A129247_row_sums": [
+      0,
+      10
+    ],
+    "A357584_central_terms": [
+      0,
+      6
+    ]
+  },
+  "factorial_fractions": {
+    "max_z_degree": 12,
+    "max_x_degree": 12,
+    "identities": [
+      "Euler Stieltjes fraction",
+      "Jacobi contraction",
+      "Bala weighted rational series",
+      "Bala continued fraction"
+    ]
+  },
+  "two_sided_recurrence": "Both displayed multiplication orders checked in every sequence family above.",
+  "nonzero_constant_variant": {
+    "source": "1+z^2",
+    "n": 2,
+    "row_polynomial": "x+2x^2",
+    "shifted_recursion": "x"
+  },
+  "variant_identities": {
+    "binomial_shift": {
+      "degree_n": [
+        1,
+        8
+      ],
+      "power_m": [
+        1,
+        4
+      ]
+    },
+    "factorial_recurrence": {
+      "n": [
+        1,
+        12
+      ],
+      "r": [
+        1,
+        12
+      ]
+    },
+    "Catalan_recurrence": {
+      "n": [
+        1,
+        12
+      ],
+      "r": [
+        1,
+        12
+      ]
+    }
+  },
+  "identities": [
+    "P_n(x) = x R(n,1), n >= 1",
+    "[x^r]R(n,k) = [z^(n-1)]A(z)^r B_k(z)"
+  ],
+  "OEIS_specializations": [
+    "A030017(n+1), 0 <= n <= 10",
+    "A030018(n), 0 <= n <= 10",
+    "A030281(n), 1 <= n <= 10",
+    "A340990(n), 0 <= n <= 5",
+    "T(n,n)=2^n, 0 <= n <= 10",
+    "A014342 through A014344: ten terms per column with source offsets",
+    "A357368 rows 0 through 9"
+  ],
+  "scope": "Finite exact identities; the all-index identities and arbitrary-semiring extension have the written proof in note.tex."
+}

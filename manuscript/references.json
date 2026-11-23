@@ -1,0 +1,211 @@
+{
+  "references": [
+    {
+      "identifier": "A340991",
+      "url": "https://oeis.org/A340991",
+      "version": "%I A340991 #24 Apr 06 2025 14:53:28",
+      "title": "Triangle T(n,k) whose k-th column is the k-fold self-convolution of the primes; triangle T(n,k), n>=0, 0<=k<=n, read by rows.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A030017",
+      "url": "https://oeis.org/A030017",
+      "version": "%I A030017 #23 Mar 18 2026 03:48:54",
+      "title": "a(1) = 1, a(n+1) = Sum_{k = 1..n} p(k)*a(n+1-k), where p(k) is the k-th prime.",
+      "offset": 1,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A030018",
+      "url": "https://oeis.org/A030018",
+      "version": "%I A030018 #41 Feb 16 2025 08:32:35",
+      "title": "Coefficients in 1/(1+P(x)), where P(x) is the generating function of the primes.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A030281",
+      "url": "https://oeis.org/A030281",
+      "version": "%I A030281 #19 Feb 01 2021 18:57:42",
+      "title": "COMPOSE natural numbers with primes.",
+      "offset": 1,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A340990",
+      "url": "https://oeis.org/A340990",
+      "version": "%I A340990 #15 Feb 21 2023 10:48:21",
+      "title": "a(n) is the (2n)-th term of the n-fold self-convolution of the primes.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A357368",
+      "url": "https://oeis.org/A357368",
+      "version": "%I A357368 #26 Mar 12 2026 05:48:46",
+      "title": "Triangle read by rows. Convolution triangle of the prime indicator sequence A089026.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A000007",
+      "url": "https://oeis.org/A000007",
+      "version": "%I A000007 M0002 #327 Jun 25 2026 09:23:13",
+      "title": "The characteristic function of {0}: a(n) = 0^n.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A000040",
+      "url": "https://oeis.org/A000040",
+      "version": "%I A000040 M0652 N0241 #1442 Oct 30 2026 15:18:53",
+      "title": "The prime numbers.",
+      "offset": 1,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A014342",
+      "url": "https://oeis.org/A014342",
+      "version": "%I A014342 #44 Sep 08 2022 08:44:39",
+      "title": "Convolution of primes with themselves.",
+      "offset": 1,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A014343",
+      "url": "https://oeis.org/A014343",
+      "version": "%I A014343 #13 Jul 08 2025 05:36:49",
+      "title": "Three-fold convolution of primes with themselves.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A014344",
+      "url": "https://oeis.org/A014344",
+      "version": "%I A014344 #23 Feb 01 2021 19:00:05",
+      "title": "Four-fold convolution of primes with themselves.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A000079",
+      "url": "https://oeis.org/A000079",
+      "version": "%I A000079 M1129 N0432 #957 Nov 03 2026 09:13:07",
+      "title": "Powers of 2: a(n) = 2^n.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "authors": [
+        "Cormac O'Sullivan"
+      ],
+      "title": "De Moivre and Bell polynomials",
+      "year": 2022,
+      "identifier": "arXiv:2203.02868v1",
+      "url": "https://arxiv.org/abs/2203.02868v1",
+      "locator": "Definition 1.1; equations (2.4), (2.6); pages 1-3",
+      "coverage": "Definition and classical ordered-composition formulas for ordinary partial Bell / De Moivre polynomials."
+    },
+    {
+      "authors": [
+        "N. J. A. Sloane"
+      ],
+      "title": "Transformations of integer sequences",
+      "url": "https://oeis.org/transforms.txt",
+      "locator": "INVERT and COMPOSE entries",
+      "coverage": "Standard transform identities used for row-sum context."
+    },
+    {
+      "identifier": "A357583",
+      "url": "https://oeis.org/A357583",
+      "version": "%I A357583 #10 Apr 06 2025 14:53:35",
+      "title": "Triangle read by rows. Convolution triangle of the Bell numbers.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A090238",
+      "url": "https://oeis.org/A090238",
+      "version": "%I A090238 #46 Oct 17 2022 07:22:26",
+      "title": "Triangle T(n, k) read by rows. T(n, k) is the number of lists of k unlabeled permutations whose total length is n.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A128899",
+      "url": "https://oeis.org/A128899",
+      "version": "%I A128899 #47 Jun 25 2026 13:27:40",
+      "title": "Riordan array (1,(1-2x-sqrt(1-4x))/(2x)).",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A205574",
+      "url": "https://oeis.org/A205574",
+      "version": "%I A205574 #19 Oct 19 2022 11:05:22",
+      "title": "Triangle T(n,k), 0<=k<=n, given by (0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, ...) DELTA (1, 0, 0, 0, 0, 0, 0, 0, ...) where DELTA is the operator defined in A084938.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A084938",
+      "url": "https://oeis.org/A084938",
+      "version": "%I A084938 #147 Jul 12 2026 15:11:36",
+      "title": "Triangle read by rows: T(n,k) = Sum_{j>=0} j!*T(n-j-1, k-1) for n >= 0, k >= 0.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A059365",
+      "url": "https://oeis.org/A059365",
+      "version": "%I A059365 #48 May 30 2026 16:40:07",
+      "title": "Another version of the Catalan triangle: T(r,s) = binomial(2*r-s-1,r-1) - binomial(2*r-s-1,r), r>=0, 0 <= s <= r.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A129247",
+      "url": "https://oeis.org/A129247",
+      "version": "%I A129247 #49 Jun 29 2026 18:22:58",
+      "title": "Invert transform of the Bell numbers.",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "identifier": "A357584",
+      "url": "https://oeis.org/A357584",
+      "version": "%I A357584 #3 Oct 05 2022 17:43:32",
+      "title": "Central terms of the convolution triangle of the Bell numbers (A357583).",
+      "offset": 0,
+      "accessed": "2026-11-13"
+    },
+    {
+      "authors": [
+        "M. Bernstein",
+        "N. J. A. Sloane"
+      ],
+      "title": "Some canonical sequences of integers",
+      "year": 1995,
+      "journal": "Linear Algebra and its Applications",
+      "volume": "226-228",
+      "pages": "57-72",
+      "url": "https://arxiv.org/abs/math/0205301",
+      "locator": "Section 1, INVERT",
+      "coverage": "The geometric generating function of the INVERT transform, specialized to weighted factorial compositions."
+    },
+    {
+      "authors": [
+        "Philippe Flajolet"
+      ],
+      "title": "Combinatorial aspects of continued fractions",
+      "year": 1980,
+      "journal": "Discrete Mathematics",
+      "volume": "32",
+      "pages": "125-161",
+      "url": "https://algo.inria.fr/flajolet/Publications/Flajolet80b.pdf",
+      "locator": "Theorem 3B, page 145",
+      "coverage": "Factorial Jacobi continued fraction, with the equivalent Euler Stieltjes form obtained by denominator contraction."
+    }
+  ]
+}

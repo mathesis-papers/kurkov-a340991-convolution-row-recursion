@@ -1,0 +1,23 @@
+{
+  "id": "kurkov-a340991-convolution-row-recursion",
+  "revision": 2,
+  "problem_ids": [
+    "kurkov-a340991-convolution-row-recursion"
+  ],
+  "topic": "Kurkov's prime and Bell convolution-row conjectures, ordered semiring coefficients and factorial consequences",
+  "title": "Kurkov's convolution-row conjectures over arbitrary semirings",
+  "creators": [
+    {
+      "name": "Ma, Haobo",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Zhang, Wenlin",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "Mikhail Kurkov's FORMULA conjectures of 5 April 2025 in OEIS A340991, revision 24, and A357583, revision 10 (both dated 6 April 2025), propose the same shifted-array recursion for the prime and Bell convolution triangles and for arbitrary coefficient sequences. We prove the recursion over every unital semiring, including noncommutative ones, with the stated order of multiplication. A shifted-tail coefficient formula determines every array column. It also gives the Bell specialization, finite-support recurrences, and the factorial generating function conjectured by Bala; the latter and its continued fraction are deductions of classical INVERT and Euler identities.",
+  "summary": "The shifted-tail formula proves the prime and Bell conjectures over arbitrary unital semirings, gives both ordered finite-support recurrences, and recovers classical Bell, factorial and Catalan specializations with precise source conventions.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/03150b25ffad5ced1bebdca2efc8c05b484c1eca/D5/S1/Recurrence/Algebraic/KurkovConvolutionRowRecursion.lean"
+}
